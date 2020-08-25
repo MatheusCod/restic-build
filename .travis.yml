@@ -15,7 +15,8 @@ script:
   - cd restic
   - go build ./cmd/restic
   - ./restic version
-  - go test ./...
+  #- go test ./...
+  - make test
 
 #notifications:
 #  slack:
