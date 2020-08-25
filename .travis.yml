@@ -12,14 +12,13 @@ cache:
     - $HOME/gopath/pkg/mod
   
 script:
-  #- unset GOPATH
-  - export PATH=$PATH:/usr/local/go/bin
+  - unset GOPATH
   - git clone https://github.com/restic/restic
   - cd restic
   - go build ./cmd/restic
   - ./restic version
-  - go test ./...
-  #- make test
+  #- go test ./...
+  - make all
 
 #notifications:
 #  slack:
