@@ -1,7 +1,6 @@
 #os: linux
-#arch: ppc64le
-os: linux-ppc64le
 arch: ppc64le
+os: linux-ppc64le
 sudo: false
 language: go
 go:
