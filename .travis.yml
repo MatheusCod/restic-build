@@ -1,13 +1,22 @@
-language: go
-sudo: false
 os: linux
 arch: ppc64le
-go: "1.12.x"
+sudo: required
+language: go
+go:
+- "1.13.x"
+
 env: RESTIC_TEST_FUSE=0 RESTIC_TEST_CLOUD_BACKENDS=0
 cache:
   directories:
     - $HOME/.cache/go-build
     - $HOME/gopath/pkg/mod
+
+jobs:
+  include:
+    - dist: xenial
+      env: dist_version=16.04
+    - dist: bionic
+      env: dist_version=18.04
   
 script:
   - unset GOPATH
