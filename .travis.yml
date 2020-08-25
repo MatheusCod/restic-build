@@ -19,5 +19,3 @@ script:
     - go build ./cmd/restic,
     - ./restic version,
     - go test ./...
-    
-    #
