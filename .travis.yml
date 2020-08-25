@@ -19,6 +19,7 @@ script:
   - ./restic version
   #- go test ./...
   - make all
+  - make test
 
 #notifications:
 #  slack:
