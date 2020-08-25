@@ -1,16 +1,15 @@
 os: linux
 arch: ppc64le
-dist: bionic
 sudo: false
 language: go
 go:
 - "1.14.x"
 
-#env: RESTIC_TEST_FUSE=0 RESTIC_TEST_CLOUD_BACKENDS=0
-#cache:
-#  directories:
-#    - $HOME/.cache/go-build
-#    - $HOME/gopath/pkg/mod
+env: RESTIC_TEST_FUSE=0 RESTIC_TEST_CLOUD_BACKENDS=0
+cache:
+  directories:
+    - $HOME/.cache/go-build
+    - $HOME/gopath/pkg/mod
   
 script:
   - unset GOPATH
